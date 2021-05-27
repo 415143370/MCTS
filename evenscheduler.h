@@ -1,7 +1,8 @@
 #ifndef EVENSCHEDULER_H
 #define EVENSCHEDULER_H
 
-#include "scheduler.h"
+#include <QTime>
+#include "gamestate.h"
 
 class EvenScheduler
 {

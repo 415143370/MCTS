@@ -5,7 +5,7 @@
 #include "stopscheduler.h"
 #include <cassert>
 #include <math.h>
-#include <QDebug>
+
 #define assertm(exp, msg) assert(((void)msg, exp))
 
 template<typename T>
@@ -129,8 +129,6 @@ bool StopScheduler<T>::finish(){
         }
         Node<T>::tTable->update(moveIdx);
     }
-    if((msecsBudget - elapsedmsecs) < 200)
-        qDebug() << "speed:" << speed << "num:" << numPlayouts;
     // most likely there is no way for the AI to win
     if(bestNode->stateScore() < 0.01 and elapsedmsecs >= 500){
         return true;
