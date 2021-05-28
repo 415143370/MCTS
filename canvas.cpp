@@ -17,15 +17,15 @@ Canvas::Canvas(QWidget *parent, int boardSize, double radius, double padding):
     connect(this, SIGNAL (updateGameState(unsigned int, unsigned int)), parent, SLOT (updateGameState(unsigned int, unsigned int)));
 }
 
-inline double Canvas::board_height() const{
+double Canvas::board_height() const{
     return (2*boardSize-2)*2*radius*cos(M_PI/6)+2*radius+2*padding;
 }
 
-inline double Canvas::board_width() const{
+double Canvas::board_width() const{
     return (2*boardSize-1)*2*radius+2*padding;
 }
 
-inline unsigned int Canvas::num_hexagons() const{
+unsigned int Canvas::num_hexagons() const{
     unsigned int numRows = 2*boardSize-1;
     return boardSize*numRows+(numRows-3)/2*((numRows-3)/2+1)+boardSize-1;
 }

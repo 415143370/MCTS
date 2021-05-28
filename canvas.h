@@ -28,9 +28,9 @@ public:
     Hexagon* locate_hexagon(const QPoint& pos);
 
     // ---- queries ----
-    inline double board_height() const;
-    inline double board_width() const;
-    inline unsigned int num_hexagons() const;
+    double board_height() const;
+    double board_width() const;
+    unsigned int num_hexagons() const;
 
     // updates canvas by ai moves
     void aiBotMovedEvent(unsigned int whiteIdx, unsigned int blackIdx);
